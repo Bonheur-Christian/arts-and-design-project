@@ -1,0 +1,456 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: seagreen;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.navbar1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    height: 40px;
+    margin: 2rem;
+    border-radius: 2rem;
+
+}
+
+.navbar1 a {
+    background-color: seagreen;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    font-size: large;
+}
+
+.navbar1 a:hover {
+    background-color: yellowgreen;
+    color: white;
+
+}
+
+.navbar h2::first-letter {
+    color: greenyellow;
+    font-family: algerian;
+    font-size: 30px;
+    padding-left: 2rem;
+}
+
+.navElement {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-right: 2rem;
+
+}
+
+.navElement button {
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.navElement button:hover {
+    color: white;
+    background-color: greenyellow;
+}
+
+.navElement a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.navElement a:hover {
+    color: lightblue;
+}
+
+.menu {
+    color: white;
+    font-weight: bolder;
+}
+
+.menu:hover {
+    color: blue;
+}
+
+.menuDescription {
+    padding: 0;
+    margin-top: -4rem;
+    margin-left: 90rem;
+    width: 13.5%;
+    height: 10rem;
+    background-color: rgb(231, 231, 231);
+    border-radius: 0.5rem;
+}
+
+.menuDescription a {
+    display: flex;
+    margin: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menuDescription a:hover {
+    color: rgb(7, 210, 85);
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.descContainer {
+    display: flex;
+    gap: 2rem;
+}
+
+.description {
+    width: 50%;
+    height: 250px;
+    padding: 2rem;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 4rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 4px gray;
+    background-color: rgb(182, 255, 213);
+}
+
+.description:hover {
+    border: 1px solid gray;
+}
+
+
+.desc {
+    border: none;
+    box-shadow: none;
+    margin: 2rem;
+}
+
+.container {
+    padding: 2rem;
+    align-self: center;
+    margin-right: 2rem;
+    margin-left: 3rem;
+    width: 90%;
+    margin-top: -0.001rem;
+    box-shadow: 0 0 10px 5px rgb(227, 226, 226);
+}
+
+.brief {
+    padding: 2rem;
+    margin-bottom: -4rem;
+}
+
+.brief p {
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.brief h1 {
+    font-size: 50px;
+}
+
+.brief h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: lighter;
+    text-shadow: 2px 2px 2px rgb(93, 93, 93);
+}
+
+.firstImages {
+    display: flex;
+    gap: 15rem;
+    margin-left: 3.5rem;
+}
+
+.firstImages img {
+    margin-top: 1rem;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.secondImages {
+    margin-left: 25rem;
+}
+
+.secondImages img {
+    width: 500px;
+    height: 400px;
+    margin-bottom: 2rem;
+}
+
+.images p {
+    padding-left: 20px;
+    margin-top: -0.5rem;
+    font-style: italic;
+    font-size: 2.5rem;
+}
+
+
+img {
+    object-fit: cover;
+
+}
+
+
+
+.imageContainer img {
+    width: 800px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+
+.imageContainer label {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+}
+
+.novelsImages {
+    display: flex;
+    gap: 20rem;
+    margin: 4rem;
+}
+
+.paintingImages {
+    display: flex;
+    gap: 20rem;
+    margin: 2rem;
+}
+
+.shortStoriesImages {
+    margin-bottom: 4rem;
+}
+
+.firstCollection {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    height: 300px;
+}
+
+
+.firstCollection img {
+    object-fit: cover;
+    width: 900px;
+}
+
+/* forms*/
+.mainContent {
+    display: flex;
+    margin-top: 4rem;
+
+}
+
+.arrow {
+    margin-left: 5rem;
+}
+
+.arrow:hover {
+    font-size: x-large;
+}
+
+fieldset {
+    border: none;
+    width: 25%;
+}
+
+legend {
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+}
+
+.form {
+    margin-left: 10rem;
+}
+
+label {
+    display: block;
+    margin: 1rem;
+}
+
+input:not(input[type="button"]) {
+    padding-left: 0.9rem;
+    width: 20rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+input[type="button"] {
+    color: white;
+    background-color: rgb(9, 152, 49);
+    font-weight: bolder;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+
+}
+
+.pagination-btn {
+    display: inline;
+    margin: 2rem;
+    background-color: rgb(217, 224, 218);
+    border: none;
+    width: 5rem;
+    height: 2.55rem;
+    border-radius: 0.5rem;
+}
+
+.active {
+
+    text-decoration: under;
+    background-color: rgb(11, 239, 30);
+}
+
+
+button[id="submit"] {
+    display: block;
+    color: white;
+    margin: 2rem;
+    width: 10rem;
+    height: 35px;
+    border-radius: 2rem;
+    margin-left: 3rem;
+    background-color: rgb(38, 192, 105);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+}
+
+button[id="submit"]:hover {
+    font-size: large;
+    height: 40px;
+    width: 12rem;
+}
+
+button[id="profile"] {
+    border: none;
+    color: white;
+    margin: 2rem;
+    width: 9rem;
+    height: 35px;
+    border-radius: 10px;
+    margin-left: 3rem;
+    background-color: rgb(38, 192, 105);
+}
+
+button[id="profile"]:hover {
+    font-size: large;
+    height: 40px;
+    width: 10rem;
+}
+
+button[id="log"] {
+    border: none;
+    color: white;
+    margin: 2rem;
+    width: 9rem;
+    height: 35px;
+    border-radius: 10px;
+    margin-left: 3rem;
+    background-color: rgb(38, 192, 105);
+}
+
+button[id="log"]:hover {
+    font-size: large;
+    height: 40px;
+    width: 10rem;
+}
+
+
+.footer {
+
+    color: white;
+    display: flex;
+    gap: 20rem;
+    background-color: rgb(29, 29, 29);
+    height: 15rem;
+    margin-top: -5rem;
+    box-shadow: 0px 4px 10px 5px rgb(161, 161, 161);
+}
+
+.footer a {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    margin-top: -1rem;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.footer a:hover {
+    color: lightblue;
+}
+
+.footer li {
+    margin-top: -1rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+}
+
+.searchbar button {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    margin: 2rem;
+    border: none;
+    background-color: cyan;
+    color: white;
+    text-align: left;
+}
+
+.searchbar button:hover {
+    background-color: seagreen;
+}
+
+.searchbar input {
+    width: 20rem;
+    height: 2rem;
+    padding-left: 1rem;
+    margin: 2rem;
+    background-color: rgb(223, 222, 222);
+    border-radius: 0.5rem;
+    border: none;
+
+}
+
+
+.searchbar input:focus {
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+}

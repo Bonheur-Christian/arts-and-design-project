@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../js/jQuery.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div>
+                <h2>Arts And Design</h2>
+            </div>
+            <div class="navElement">
+                <a href="home.html">Home</a>
+                <a href="art.html">Art Works</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Service & Contacts</a>
+                <button id="signup">Sign up</button>
+                <button id="login">Log in</button>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="menu"
+                    fill="currentColor">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <div class="menuDescription">
+                <a href="users.html">Users</a>
+                <a href="#">Settings</a>
+                <a href="account.html">Profile</a>
+            </div>
+            <div class="brief">
+                <h1>Welcome!</h1>
+                <p>Discover the beauty of various artworks.</p>
+                <h2>Trending artworks </h2>
+            </div>
+            <section class="firstImages">
+                <div class="images">
+                    <img src="../images/beloved.png" alt="Beloved">
+                    <p>Beloved By Toni Morrison</p>
+                </div>
+                <div class="images">
+                    <img src="../images/The lottery.png" alt="">
+                    <p>The Lottery By Shirley Jackson </p>
+                </div>
+            </section>
+            <section class="secondImages">
+                <div class="images">
+                    <img src="../images/the flower career.png" alt="">
+                    <p>The flower career By Diego Rivera</p>
+                </div>
+            </section>
+
+
+    </div>
+    </main>
+    <footer class="footer">
+        <div class="links">
+            <h3><u>Quick links</u></h3>
+            <a href="home.html">Home</a>
+            <a href="art.html">Art Works</a>
+            <a href="about.html">About Us</a>
+            <a href="service.html">Service & Contacts</a>
+        </div>
+
+        <div class="services">
+            <h3><u> Services</u></h3>
+            <a href="#">Book selling</a>
+            <a href="#">Library services</a>
+            <a href="#">Teaching painting</a>
+            <a href="#">History</a>
+
+        </div>
+        <div class="partners">
+            <h3><u>Partners</u></h3>
+            <li>National Museums</li>
+            <li>Authors</li>
+            <li>Artists</li>
+            <li>Government</li>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $("#signup").click(function () {
+                window.location.href = "signup.html";
+            })
+            $("#login").click(function () {
+                window.location.href = "signUpSuccessful.html";
+            })
+            $(".menuDescription").hide();
+            $(".menu").click(function () {
+                $(".menuDescription").show();
+            })
+            $(".menu").dblclick(function () {
+                $(".menuDescription").hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -2,7 +2,8 @@
 session_start();
 $server = "localhost";
 $username = "root";
-$password = "";
+// $password = ""
+$password = "Bruno@1980";
 $database = "application";
 
 $connection = new mysqli($server, $username, $password, $database);
@@ -12,9 +13,10 @@ if($connection->connect_error){
 
 header('Content-Type:application/json');
 
-$userId = $_SESSION['user_id'];
-echo $userId;
+// $userId = $_SESSION['user_id'];
+// echo $userId;
 
+$userId =$_POST['id'];
 $name =$_POST['name'];
 $email =$_POST['email']; 
 $password =$_POST['password']; 

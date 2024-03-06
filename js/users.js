@@ -31,17 +31,23 @@ $(document).ready(function () {
 
         paginatedData.forEach((item) => {
             const row = document.createElement("tr");
-            let rowDataId = document.createElement("td").innerHTML = item.user_id;
-            let rowDataNames = document.createElement("td").innerHTML = item.names;
-            let rowDataEmail = document.createElement("td").innerHTML = item.email;
-            let rowDataPassword = document.createElement("td").innerHTML = item.password;
+            let rowDataId = document.createElement("td")
+            rowDataId.innerHTML = item.user_id;
+            let rowDataNames = document.createElement("td")
+            rowDataNames.innerHTML = item.names;
+            let rowDataEmail = document.createElement("td")
+            rowDataEmail.innerHTML = item.email;
+            let rowDataPassword = document.createElement("td")
+            rowDataPassword.innerHTML = item.password;
             let rowDataCheck = document.createElement("td")
-            let rowDataCheckInput = document.createElement("input").type = "checkbox"
+            let rowDataCheckInput = document.createElement("input")
+            rowDataCheckInput.type = "checkbox";
             rowDataCheckInput.id = "tableCheckBoxes";
-            rowDataCheckInput.dataset['id'] = item.user_id
+            rowDataCheckInput.dataset.id = item.user_id
             rowDataCheck.appendChild(rowDataCheckInput);
             let rowDataButton = document.createElement("td")
-            let rowDataButtonInput = document.createElement("input").type = "button"
+            let rowDataButtonInput = document.createElement("input")
+            rowDataButtonInput.type = "button"
             rowDataButtonInput.setAttribute("value", "Edit")
             rowDataButtonInput.setAttribute("id", "edit")
             rowDataButtonInput.setAttribute("data-id", item.user_id)
@@ -51,14 +57,17 @@ $(document).ready(function () {
             rowDataButtonInput.addEventListener('click', (e) => {
                 e.preventDefault();
                 console.log("tcgfgvjh");
-                const userId = editBtn.getAttribute("data-id");
-                const userNames = editBtn.getAttribute("data-names");
-                const email = editBtn.getAttribute("data-email");
-                const userPassword = editBtn.getAttribute("data-password");
+                const userId = rowDataButtonInput.getAttribute("data-id");
+                const userNames = rowDataButtonInput.getAttribute("data-names");
+                const email = rowDataButtonInput.getAttribute("data-email");
+                const userPassword = rowDataButtonInput.getAttribute("data-password");
                 const editForm = document.getElementById("edit-form");
                 editForm.setAttribute("data-user-id", userId);
                 editForm.style.display = "block"
 
+
+                const idInput = document.getElementById("edit-id");
+                idInput.setAttribute("value", userId);
                 const nameInput = document.getElementById("edit-name");
                 nameInput.setAttribute("value", userNames);
                 const emailInput = document.getElementById("edit-email");
@@ -68,16 +77,17 @@ $(document).ready(function () {
 
                 $("#Save").click(function (e) {
                     e.preventDefault();
-
-                    console.log("form submitted")
+                    let dataUpdated = {
+                        id: idInput.value,
+                        name: nameInput.value,
+                        email: emailInput.value,
+                        password: passwordInput.value
+                    }
+                    console.log("form submitted", dataUpdated);
                     $.ajax({
                         url: "../backend/update.php",
                         method: "POST",
-                        data: {
-                            name: nameInput.value,
-                            email: emailInput.value,
-                            password: passwordInput.value
-                        },
+                        data: dataUpdated,
                         success: function (response) {
                             console.log("successful", response);
                         },

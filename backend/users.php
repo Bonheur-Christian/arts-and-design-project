@@ -1,10 +1,12 @@
 <?php
 $server = "localhost"; 
 $username = "root";
-$password = "";
+// $password = "";
+$password = "Bruno@1980";
 $database = "application";
+$port = 3306;
 
-$connection = new mysqli($server,$username, $password, $database);
+$connection = new mysqli($server,$username, $password, $database , $port);
 if($connection->connect_error){
     die("connection failed".$connection->error);
 }

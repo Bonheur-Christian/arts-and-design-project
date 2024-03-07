@@ -8,7 +8,8 @@ $(document).ready(function () {
     const rowsonPage = 4;
 
     let allUsersNavButton = document.getElementById("all-users-nav-button");
-    allUsersNavButton/addEventListener("click", ()=>{
+    let notFound = document.getElementById("no-data-found");
+    allUsersNavButton.addEventListener("click", ()=>{
         window.location.href = "./users.html"
     })
 
@@ -21,6 +22,9 @@ $(document).ready(function () {
         },
         dataType: 'json',
         success: function (tableData) {
+            if(tableData.length == 0){
+                notFound.style.display = "block";
+            }
             displayer(tableData)
             const totalPages = Math.ceil(tableData.length / rowsonPage);
             displayPagination(totalPages)

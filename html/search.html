@@ -75,6 +75,16 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .no-data-found{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: red;
+        }
     </style>
 </head>
 <header>
@@ -116,9 +126,11 @@
                 </tr>
             </thead>
             <tbody>
-
             </tbody>
         </table>
+        <div class="no-data-found">
+            Sorry No data Found
+        </div>
         <div id="pagination"></div>
         <button type="button" id="delete">DELETE</button>
         <div id="edit-form" style="display: none;">

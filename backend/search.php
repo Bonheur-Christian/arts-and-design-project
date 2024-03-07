@@ -12,7 +12,8 @@ if($connection->connect_error){
 
 header('Content-Type: application/json');
 
-$query ="SELECT * FROM user";
+$seach_param = $_GET['search_param'];
+$query ="SELECT * FROM user WHERE names LIKE '%$seach_param%' OR email LIKE '%$seach_param%'";
 $result = mysqli_query($connection, $query);
 
 $users = array();

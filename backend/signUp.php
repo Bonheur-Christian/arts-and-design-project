@@ -2,7 +2,7 @@
 session_start();
 $server = "localhost";
 $username  = "root";
-$password = "";
+$password = "Bruno@1980";
 $database = "application";
 
 

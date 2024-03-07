@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
+    <script src="../js/jQuery.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            padding-left: 2rem;
+        }
+
+        th {
+            font-weight: bolder;
+            color: black;
+            font-size: larger;
+        }
+
+        th {
+            background-color: seagreen;
+            color: white;
+        }
+
+        /* tr:nth-child(odd) {
+            background-color: rgb(240, 239, 239);
+        } */
+
+        tr,
+        td,
+        th {
+            padding-left: 2rem;
+            border: 1PX solid black;
+            width: 25%;
+            height: 50px;
+        }
+
+        #delete {
+            width: 10rem;
+            height: 3rem;
+            margin: 4rem;
+            margin-top: -2rem;
+            border-radius: 0.5rem;
+            border: none;
+            background-color: rgb(16, 231, 109);
+        }
+
+        #pagination {
+            color: #ffffff;
+            margin: 2rem;
+            gap: 2rem;
+            /* width: 20px; */
+        }
+
+        #users {
+            margin: 2rem;
+        }
+
+        .all-users-nav{
+            display: flex;
+            justify-content: left;
+            margin: 2rem;
+            align-items: center;
+        }
+
+        .all-users-nav > button{
+            padding: 0.5rem;
+            font-size: 1rem;
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<header>
+    <nav class="navbar">
+        <div>
+            <h2>Arts And Design</h2>
+        </div>
+        <div class="navElement">
+            <a href="home.html">Home</a>
+            <a href="art.html">Art Works</a>
+            <a href="about.html">About Us</a>
+            <a href="service.html">Service & Contacts</a>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="menu"
+                fill="currentColor">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <main>
+        <div class="arrow">
+            <a href="home.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        </div>
+        <div class="all-users-nav">
+            <button id="all-users-nav-button">All Users</button>
+        </div>
+        <table id="users">
+            <thead>
+                <tr>
+                    <th>user id</th>
+                    <th>names</th>
+                    <th>email</th>
+                    <th>password</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div id="pagination"></div>
+        <button type="button" id="delete">DELETE</button>
+        <div id="edit-form" style="display: none;">
+            <form>
+                <fiel dset>
+                    <legend>edit user</legend>
+                    <label for="edit-id">User Id</label>
+                    <input type="text" id="edit-id" required readonly>
+                    <label for="edit-name">Names</label>
+                    <input type="text" id="edit-name" required>
+                    <label for="edit-email">Email</label>
+                    <input type="email" id="edit-email" required>`
+
+                    <label for="edit-password">Password</label>
+                    <input type="password" id="edit-password" required>
+                    <button id="Save">Save</button>
+                    </fieldset>
+            </form>
+        </div>
+    </main>
+    <script src="../js/search.js"></script>
+</body>
+
+
+</html>

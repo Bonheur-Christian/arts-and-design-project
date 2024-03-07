@@ -1,10 +1,10 @@
 $(document).ready(function () {
     const pagination = document.getElementById("pagination");
-
     let thisPage = 1;
     const rowsonPage = 4;
-
-
+    
+    
+    
     $.ajax({
         url: '../backend/users.php',
         method: 'GET',
@@ -13,12 +13,38 @@ $(document).ready(function () {
             displayer(tableData)
             const totalPages = Math.ceil(tableData.length / rowsonPage);
             displayPagination(totalPages)
+            console.log("tableData", tableData);
+            let searchBtn = document.querySelector(".searchBtn-form")
+           let searchInput = document.querySelector(".searchInput-form");
+           let searchKey = "";
+              searchInput.addEventListener("change", (e) => {
+            searchKey = e.target.value;
+            console.log(searchKey);s
+        });
+
+
+        if(searchInput == null){
+            alert("Please enter a valid search term");
+        }
+          searchBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          let searchTerm = searchKey; // Trim any whitespace from the search term
+        if (!searchTerm) { // Check if the search term is empty
+            alert("Please enter a valid search term");
+        } else {
+            window.location.href = `./search.html?search=${encodeURIComponent(searchTerm)}`;
+            // encodeURIComponent to properly encode the search term in the URL
+        }
+    });
+    
+
         },
         error: function (error) {
             console.error('Error fetching users:', error);
         }
     });
 
+    
 
     function displayer(data) {
         const tableBody = document.querySelector("tbody");

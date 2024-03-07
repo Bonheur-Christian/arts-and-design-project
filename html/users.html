@@ -59,6 +59,31 @@
         #users {
             margin: 2rem;
         }
+
+        .search-container {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin: 2rem;
+        }
+
+        .search-container > form > input{
+            width: 20rem;
+            border-radius: 0.5rem;
+            border: solid;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .search-container > form > button{
+            width: 10rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            font-size: large;
+            background-color: rgb(16, 231, 109);
+        }
     </style>
 </head>
 <header>
@@ -85,6 +110,12 @@
         <div class="arrow">
             <a href="home.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
         </div>
+        <div class="search-container">
+            <form>
+                <input type="text" name="" class="searchInput-form" id="searchInput" placeholder="Search user by username or password">
+                <button class="searchBtn-form" type="submit">Search</button>
+            </form>
+        </div>
         <table id="users">
             <thead>
                 <tr>
@@ -104,7 +135,7 @@
         <button type="button" id="delete">DELETE</button>
         <div id="edit-form" style="display: none;">
             <form>
-                <fiel dset>
+                <fieldset>
                     <legend>edit user</legend>
                     <label for="edit-id">User Id</label>
                     <input type="text" id="edit-id" required readonly>

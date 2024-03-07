@@ -12,6 +12,7 @@ $(document).ready(function () {
         window.location.href = "./users.html"
     })
 
+
     $.ajax({
         url: '../backend/search.php',
         method: 'GET',
